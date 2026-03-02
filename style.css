@@ -314,6 +314,24 @@ html {
     font-weight: 600;
     line-height: 1.4;
 }
+/* إضافات السحب واللمس لسكشن العروض */
+.carousel-track {
+    cursor: grab;
+    touch-action: pan-y; /* للسماح للمستخدم بالتمرير للأسفل في الموقع دون تداخل مع السحب الأفقي */
+}
+
+.carousel-track.grabbing {
+    cursor: grabbing !important;
+}
+
+.offer-card {
+    user-select: none; /* منع تحديد النصوص عن طريق الخطأ أثناء السحب */
+    -webkit-user-drag: none;
+}
+
+.offer-image img {
+    pointer-events: none; /* منع المتصفح من سحب الصورة كملف */
+}
 
 /* Menu Section */
 .menu-section {
@@ -748,4 +766,5 @@ html {
     
     /* جعل أزرار التواصل تحت بعض في الموبايل */
     .action-btn { flex: 100%; }
+
 }
